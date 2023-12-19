@@ -1,0 +1,110 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+
+  --color-secondary: #101d2c;
+
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-grey-light-2);
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+}
+
+.error__text {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 30rem);
+  color: rgb(237, 48, 48);
+}
+
+.error__message {
+  font-size: 1.5rem;
+  color: rgb(237, 48, 48);
+}
+
+.action__icons {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.mr-1 {
+  margin-right: 1.5rem;
+}
+
+.delete {
+  fill: rgb(237, 48, 48);
+}
+
+.ta-right {
+  text-align: right !important;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--color-primary-dark);
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  top: auto;
+  overflow: hidden;
+}
+</style>
