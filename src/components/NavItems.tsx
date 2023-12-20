@@ -13,6 +13,7 @@ const NavItems = () => {
       name: 'Liturgical Calendar',
       type: 'external',
     },
+    { path: '/login', name: 'Login' },
   ];
   return (
     <Fragment>
