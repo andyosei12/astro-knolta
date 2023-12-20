@@ -1,0 +1,43 @@
+---
+import '@fontsource-variable/noto-sans-mono';
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  label: string;
+}
+
+const { label, ...inputProps } = Astro.props;
+---
+
+<div class="input">
+  <label class="input__label">{label}</label>
+  <input class="input__field" {...inputProps} />
+</div>
+
+<style>
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input__label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+  }
+
+  .input__field {
+    width: 100%;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.7rem;
+    color: var(--color-grey-dark-2);
+    border: 2px solid var(--color-secondary);
+    font-family: 'Noto Sans Mono', monospace;
+    margin-bottom: 2rem;
+  }
+  .input__field:focus {
+    outline: none;
+  }
+</style>

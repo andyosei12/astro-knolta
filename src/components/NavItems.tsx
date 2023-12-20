@@ -4,7 +4,7 @@ import NavList from './NavList';
 
 const NavItems = () => {
   const navLinks = [
-    { path: '/home', name: 'Home' },
+    { path: '/', name: 'Home' },
     { path: '/events', name: 'Events' },
     { path: '/appointments', name: 'Appointments' },
     { path: '/executives', name: 'Executives' },

@@ -1,0 +1,48 @@
+---
+export const prerender = false;
+import Input from '../components/Input.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Shcc Knolta | Login">
+  <main>
+    <form class="form">
+      <h1>Login</h1>
+
+      <Input label="Username" type="text" />
+
+      <Input label="Password" type="password" />
+      <button type="submit" class="btn mt-1"> Login</button>
+    </form>
+  </main>
+</Layout>
+
+<style>
+  .form {
+    padding: 1.5rem 2.3rem;
+    background-color: var(--color-grey-light-1);
+    min-height: calc(100vh - 8rem);
+  }
+
+  .form h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--color-secondary);
+    border-bottom: 3px solid rgb(121, 118, 118);
+    width: min-content;
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .form h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-block: 1.5rem;
+  }
+
+  .form div {
+    margin-bottom: 4rem;
+  }
+</style>
